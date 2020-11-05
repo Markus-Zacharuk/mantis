@@ -1,6 +1,6 @@
 # About mantis
 Mantis is a dynamically typed, interpreted programming language inteded to provide multi-precision numerical types as standard types.
-The original idea was, to make muli-precision arithmetic accessible like built-in types in any programming language. Thus, multi-precision integers, rationals and floats are built-in types in mantis. Besides providing high-level access to multi-precision arithmetics, mantis is too a study in creating a simple and comprehensible scripting language that follows the aesthetics of C-syntax. It provides value-semantics. Those are optimized with parallelization (time) and referencing (space).
+The original idea was to make multi-precision arithmetic accessible like built-in types in any programming language. Thus, multi-precision integers, rationals and floats are built-in types in mantis. Besides providing high-level access to multi-precision arithmetics, mantis is too a study in creating a simple and comprehensible scripting language that follows the aesthetics of C-syntax. It provides value-semantics. Those are optimized with parallelization (time) and referencing (space).
 
 ![Image of a mantis](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Miomantis_paykullii_Luc_Viatour.jpg/347px-Miomantis_paykullii_Luc_Viatour.jpg? "Egyptian Praying Mantis from I, Luc Viatour, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5855103")
 
