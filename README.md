@@ -4,7 +4,10 @@ The original idea was to make multi-precision arithmetic accessible like built-i
 
 ![Image of a mantis](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Miomantis_paykullii_Luc_Viatour.jpg/347px-Miomantis_paykullii_Luc_Viatour.jpg? "Egyptian Praying Mantis from I, Luc Viatour, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5855103")
 
-# Installing (TBD)
+# Tutorial
+Check out the [tutorial in the wiki](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial).
+
+# Installation (TBD)
 Download the executable (link) or build the project yourself. The simplest way to build it yourself is:
 * Download the project's zip file or clone the project.
 * Open a terminal in the projects root folder where you find the file 'makefile'
