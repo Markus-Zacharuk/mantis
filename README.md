@@ -5,7 +5,7 @@ The original idea was to make multi-precision arithmetic accessible like built-i
 ![Image of a mantis](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Miomantis_paykullii_Luc_Viatour.jpg/347px-Miomantis_paykullii_Luc_Viatour.jpg? "Egyptian Praying Mantis from I, Luc Viatour, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5855103")
 
 # Tutorial
-Check out the [tutorial in the wiki](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial).
+Check out the [tutorial](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial) in the wiki.
 
 # Installation (TBD)
 Download the executable (link) or build the project yourself. The simplest way to build it yourself is:
@@ -28,4 +28,4 @@ This project is using the following great projects
 * [clang](https://clang.llvm.org/) for compiling,
 * [gcc](https://gcc.gnu.org/) for compiling,
 * [DOT](http://www.graphviz.org/doc/info/lang.html) for representation and debugging parsing as graphs,
-* [xdot](https://github.com/jrfonseca/xdot.py) for viewing these graphs
+* [xdot](https://github.com/jrfonseca/xdot.py) for viewing these graphs.
