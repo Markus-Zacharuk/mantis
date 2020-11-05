@@ -12,7 +12,7 @@ Download the executable (link) or build the project yourself. The simplest way t
 * Download the project's zip file or clone the project.
 * Open a terminal in the projects root folder where you find the file 'makefile'
   * Optionally edit the makefile (e.g. choose your own compiler).
-* Type 'make optimized' for optimized (-O3) or 'make' for normal (-O1) compilation.
+* Type `make optimized` for optimized (-O3) or `make` for normal (-O1) compilation.
 
 Now that you have the executable:
 * Run the executable by typing './mantis'
