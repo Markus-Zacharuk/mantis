@@ -15,7 +15,7 @@ Download the executable (link) or build the project yourself. The simplest way t
 * Type `make optimized` for optimized (-O3) or `make` for normal (-O1) compilation.
 
 Now that you have the executable:
-* Run the executable by typing './mantis'
+* Run the executable by typing `./mantis`
 
 # Acknowledgements
 This project is using the following great projects
