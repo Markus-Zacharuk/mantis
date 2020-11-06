@@ -8,7 +8,7 @@ The original idea was to make multi-precision arithmetic accessible like built-i
 Check out the [tutorial](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial) in the wiki.
 
 # Installation (TBD)
-Download the executable (link) or build the project yourself. The simplest way to build it yourself is:
+Download the [executable](https://github.com/Markus-Zacharuk/mantis/releases/download/v0.1.0-alpha/mantis) (x86-64 linux) or build the project yourself. The simplest way to build it yourself is:
 * Download the project's zip file or clone the project.
 * Open a terminal in the projects root folder where you find the file 'makefile'
   * Optionally edit the makefile (e.g. choose your own compiler).
