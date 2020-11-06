@@ -18,7 +18,7 @@ Now that you have the executable:
 * Run the executable by typing `./mantis`
 
 # Acknowledgements
-This project is using the following great projects
+This project is using the following great projects:
 * [GMP](https://gmplib.org/) for multi-precision integers and rationals,
 * [MPFR](https://www.mpfr.org/) for multi-precision floating-point types,
 * [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) to provide c++-style use of [MPFR](https://www.mpfr.org/),
