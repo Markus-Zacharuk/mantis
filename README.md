@@ -9,6 +9,8 @@ Check out the [tutorial](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial
 
 # Installation (TBD)
 Download the [executable](https://github.com/Markus-Zacharuk/mantis/releases/download/v0.1.0-alpha/mantis) (x86-64 linux) or build the project yourself. The simplest way to build it yourself is:
+* Install the dependencies:
+  * [GMP](https://gmplib.org/), [MPFR](https://www.mpfr.org/), [MPFR C++](http://www.holoborodko.com/pavel/mpfr/), [boost](https://www.boost.org/)
 * Download the project's zip file or clone the project.
 * Open a terminal in the projects root folder where you find the file 'makefile'
   * Optionally edit the makefile (e.g. choose your own compiler).
