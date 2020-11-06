@@ -12,44 +12,44 @@ int recurse_counter = 1;
 %}
 
 %union {
-	ExprAST * Expr;
-	ReturnAST* Return;
-	ForAST * For;
-	VarAST * Var;
-	BlockAST * Block;
-	AssignmentAST * Assignment;
-	IntAST * Int;
-	FltAST * Flt;
-	BinaryOpAST * Binary;
-	UnaryOpAST *  Unary;
-	FunctionAST * Function;
-	CallAST * Call;
-	IfAST * If;
-	ListAST * List;
-	DictAST * Dict;
-	SubscriptAST * Subscript;
+	ExprAST                * Expr;
+	ReturnAST              * Return;
+	ForAST                 * For;
+	VarAST                 * Var;
+	BlockAST               * Block;
+	AssignmentAST          * Assignment;
+	IntAST                 * Int;
+	FltAST                 * Flt;
+	BinaryOpAST            * Binary;
+	UnaryOpAST             *  Unary;
+	FunctionAST            * Function;
+	CallAST                * Call;
+	IfAST                  * If;
+	ListAST                * List;
+	DictAST                * Dict;
+	SubscriptAST           * Subscript;
 	SubscriptAssignmentAST * SubscriptAssignment;
-	StringAST * String;
-	PrintAST * Print;
+	StringAST              * String;
+	PrintAST               * Print;
 }
 
-%token 						 EQL UNEQL BEQL SEQL LIMP RIMP EQV GRAPH POW SQRT SGN GCD LCM FIBO PRIMORIAL IF ELSE ELIF ABS FOR RET SETPREC GETPREC SETPRECD GETPRECD SETOUTPREC SOPD RATIONAL NUM DEN INT_T FLT_T ISPRIME NEXTPRIME PRINT SEP END REF_COUNT ADDRESS_OF IS_KEY
-%token <Int>				 INT
-%token <Flt>				 FLT
-%token <Var> 				 VAR FUN
-%token <String>			     STR
+%token                       EQL UNEQL BEQL SEQL LIMP RIMP EQV GRAPH POW SQRT SGN GCD LCM FIBO PRIMORIAL IF ELSE ELIF ABS FOR RET SETPREC GETPREC SETPRECD GETPRECD SETOUTPREC SOPD RATIONAL NUM DEN INT_T FLT_T ISPRIME NEXTPRIME PRINT SEP END REF_COUNT ADDRESS_OF IS_KEY
+%token <Int>                 INT
+%token <Flt>                 FLT
+%token <Var>                 VAR FUN
+%token <String>              STR
 
-%type 						 Source
-%type  <Expr>				 Expr TopExpr Op BlockExpr IfExpr SubscriptExpr //ListExpr SubscriptAssignmentExpr
-%type  <Return> 		     Return
-%type  <For>				 For Forinitbegin Forinit Forcond Forendbegin Forend
-%type	 <Block>			 Block Blockbegin Blockmiddle
+%type                        Source
+%type  <Expr>                Expr TopExpr Op BlockExpr IfExpr SubscriptExpr //ListExpr SubscriptAssignmentExpr
+%type  <Return>              Return
+%type  <For>                 For Forinitbegin Forinit Forcond Forendbegin Forend
+%type  <Block>               Block Blockbegin Blockmiddle
 %type  <Assignment>          Assignment
-%type  <Function>		     Function FunctionName FunctionArgs Functionproto
-%type  <Call>				 Call Callbegin
-%type  <If>					 Ifbegin If
-%type  <List> 			     List Listbegin
-%type  <Dict>				 Dict Dictbegin
+%type  <Function>            Function FunctionName FunctionArgs Functionproto
+%type  <Call>                Call Callbegin
+%type  <If>                  Ifbegin If
+%type  <List>                List Listbegin
+%type  <Dict>                Dict Dictbegin
 %type  <Subscript>           Subscript Subscriptbegin Subscriptmiddle
 %type  <SubscriptAssignment> SubscriptAssignment
 %type  <Print>               Print Printbegin
