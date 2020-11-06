@@ -71,38 +71,38 @@ int recurse_counter = 1;
 
 %%
 
-Source            : GRAPH '(' TopExpr ')' ';'                   { save_graph($3); delete $3; YYACCEPT;                              }
-                  | TopExpr ';'                                 { print_eval($1); delete $1; YYACCEPT;                              }
-                  | Print ';'                                   { print_eval($1); delete $1; YYACCEPT;                              }
-                  | Function                                    { functions[$1->name] = std::unique_ptr<FunctionAST>($1); YYACCEPT; }
-                  ;
+Source              : GRAPH '(' TopExpr ')' ';'                   { save_graph($3); delete $3; YYACCEPT;                              }
+                    | TopExpr ';'                                 { print_eval($1); delete $1; YYACCEPT;                              }
+                    | Print ';'                                   { print_eval($1); delete $1; YYACCEPT;                              }
+                    | Function                                    { functions[$1->name] = std::unique_ptr<FunctionAST>($1); YYACCEPT; }
+                    ;
 
-List               : '[' ']'                                    { $$ = new ListAST();                                               }
-                   | Listbegin ']'                              { $$ = $1;}
+List                : '[' ']'                                    { $$ = new ListAST();                                               }
+                    | Listbegin ']'                              { $$ = $1;}
 				      ;
-Listbegin          : Listbegin ',' Expr                         { $$ = $1; $$->add_element($3);                                     }
-                   | '[' Expr                                   { $$ = new ListAST($2);                                             }
-                   ;
+Listbegin           : Listbegin ',' Expr                         { $$ = $1; $$->add_element($3);                                     }
+                    | '[' Expr                                   { $$ = new ListAST($2);                                             }
+                    ;
 
-Dict               : '{' '}'                                    { $$ = new DictAST();                                               }
-                   | Dictbegin '}'                              { $$ = $1;                                                          }
-                   ;
-Dictbegin          : Dictbegin ',' Expr ':' Expr                { $$ = $1; $$->add_entry($3, $5);                                   }
-                   | '{' Expr ':' Expr                          { $$ = new DictAST($2, $4);                                         }
-                   ;
+Dict                : '{' '}'                                    { $$ = new DictAST();                                               }
+                    | Dictbegin '}'                              { $$ = $1;                                                          }
+                    ;
+Dictbegin           : Dictbegin ',' Expr ':' Expr                { $$ = $1; $$->add_entry($3, $5);                                   }
+                    | '{' Expr ':' Expr                          { $$ = new DictAST($2, $4);                                         }
+                    ;
 
-Subscript          : Subscriptmiddle ']'                        { $$ = $1;                                                          }
-                   ;
-Subscriptmiddle    : Subscriptbegin{ $$ = $1;}
-                   | Subscriptmiddle ',' Expr                   { $$ = $1; $$->add_subscript($3);                                   }
-                   | Subscriptmiddle ',' ':' Expr               { $$ = $1; $$->add_subscript(new NoneAST(), $4);                    }
-                   | Subscriptmiddle ','  Expr ':'              { $$ = $1; $$->add_subscript($3, new NoneAST());                    }
-                   | Subscriptmiddle ',' ':' ':'                { $$ = $1; $$->add_subscript(new NoneAST(), new NoneAST());         }
-                   | Subscriptmiddle ',' Expr ':' Expr          { $$ = $1; $$->add_subscript($3, $5);                               }
-                   | Subscriptmiddle ',' ':' ':' Expr           { $$ = $1; $$->add_subscript(new NoneAST(), new NoneAST(), $5);     }
-                   | Subscriptmiddle ',' ':' Expr ':' Expr      { $$ = $1; $$->add_subscript(new NoneAST(), $4, $6);                }
-                   | Subscriptmiddle ',' Expr ':' Expr ':' Expr { $$ = $1; $$->add_subscript($3, $5, $7);                           }
-                   ;
+Subscript           : Subscriptmiddle ']'                        { $$ = $1;                                                          }
+                    ;
+Subscriptmiddle     : Subscriptbegin{ $$ = $1;}
+                    | Subscriptmiddle ',' Expr                   { $$ = $1; $$->add_subscript($3);                                   }
+                    | Subscriptmiddle ',' ':' Expr               { $$ = $1; $$->add_subscript(new NoneAST(), $4);                    }
+                    | Subscriptmiddle ','  Expr ':'              { $$ = $1; $$->add_subscript($3, new NoneAST());                    }
+                    | Subscriptmiddle ',' ':' ':'                { $$ = $1; $$->add_subscript(new NoneAST(), new NoneAST());         }
+                    | Subscriptmiddle ',' Expr ':' Expr          { $$ = $1; $$->add_subscript($3, $5);                               }
+                    | Subscriptmiddle ',' ':' ':' Expr           { $$ = $1; $$->add_subscript(new NoneAST(), new NoneAST(), $5);     }
+                    | Subscriptmiddle ',' ':' Expr ':' Expr      { $$ = $1; $$->add_subscript(new NoneAST(), $4, $6);                }
+                    | Subscriptmiddle ',' Expr ':' Expr ':' Expr { $$ = $1; $$->add_subscript($3, $5, $7);                           }
+                    ;
 Subscriptbegin      : SubscriptExpr '[' Expr                    { $$ = new SubscriptAST($1, $3);                                    }
                     | SubscriptExpr '[' ':' Expr                { $$ = new SubscriptAST($1, new NoneAST(), $4);                     }
                     | SubscriptExpr '[' Expr ':'                { $$ = new SubscriptAST($1, $3, new NoneAST());                     }
