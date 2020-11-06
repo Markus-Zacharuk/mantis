@@ -54,18 +54,17 @@ int recurse_counter = 1;
 %type  <SubscriptAssignment> SubscriptAssignment
 %type  <Print>               Print Printbegin
 
-
-%left '^'
-%left EQV
-%left LIMP RIMP
-%left '|'
-%left '&'
-%left	EQL UNEQL
-%left '<' '>'
-%left '+' '-'
-%left '*' '/' '%'
-%right POW
-%left '!' '#' '~' UMINUS
+%left                        '^'
+%left                        EQV
+%left                        LIMP RIMP
+%left                        '|'
+%left                        '&'
+%left	                     EQL UNEQL
+%left                        '<' '>'
+%left                        '+' '-'
+%left                        '*' '/' '%'
+%right                       POW
+%left                        '!' '#' '~' UMINUS
 
 %glr-parser
 
