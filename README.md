@@ -6,18 +6,20 @@ The original idea was to make multi-precision arithmetic accessible like built-i
 
 # Example
 Implementation of the Lucas-Lehmer-Test:
->\> lltest(x) = {\
->\>    var = 4;\
->\>    m = 2\*\*x - 1;\
->\>    for i = 2; i<x; i = i+1; {\
->\>        var = (var\*\*2 - 2) % m;\
->\>    }\
->\>    return var;\
->\>}\
->\> lltest(19);\
->0\
->\> lltest(21);\
->840107
+```
+> lltest(x) = {
+>     var = 4;
+>     m = 2**x - 1;
+>     for i = 2; i<x; i = i+1; {
+>         var = (var**2 - 2) % m;
+>     }
+>     return var;
+> }
+> lltest(19);
+0
+> lltest(21);
+840107
+```
 
 # Tutorial
 Check out the [tutorial](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial) in the wiki.
