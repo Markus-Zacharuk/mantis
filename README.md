@@ -5,7 +5,7 @@ The original idea was to make multi-precision arithmetic accessible like built-i
 ![Image of a mantis](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Miomantis_paykullii_Luc_Viatour.jpg/347px-Miomantis_paykullii_Luc_Viatour.jpg? "Egyptian Praying Mantis from I, Luc Viatour, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5855103")
 
 # Example
-Implementation of the Lucas-Lehmer-Test:
+Implementation of the [Lucas-Lehmer-Test](https://en.wikipedia.org/wiki/Lucas%E2%80%93Lehmer_primality_test):
 ```
 > lltest(x) = {
 >     var = 4;
