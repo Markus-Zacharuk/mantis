@@ -8,7 +8,7 @@ The original idea was to make multi-precision arithmetic accessible like built-i
 Check out the [tutorial](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial) in the wiki.
 
 # Installation
-Download the [executable](https://github.com/Markus-Zacharuk/mantis/releases/download/v0.1.0-alpha/mantis) (x86-64 linux) and make it executable (`right-click -> permissions -> run as a program`). Install these dependencies if you haven't got them yet: `gmp`, `mpfr`, `lpthread`. On Debian install `libgmp-dev` for `gmp` (`sudo apt-get install libgmp-dev`) and download this [executable](https://github.com/Markus-Zacharuk/mantis/releases/download/v0.1.0-alpha/mantis_static_libstdc++) (or else you might encounter a linker-problem with libstdc++).
+Download the [executable](https://github.com/Markus-Zacharuk/mantis/releases/download/v0.1.0-alpha/mantis) (x86-64 linux) and make it executable (`right-click -> permissions -> run as a program`), then open a terminal where the file is and run the programm with `\.mantis`. Install these dependencies if you haven't got them yet: `gmp`, `mpfr`, `lpthread`. On Debian install `libgmp-dev` for `gmp` (`sudo apt-get install libgmp-dev`) and download this [executable](https://github.com/Markus-Zacharuk/mantis/releases/download/v0.1.0-alpha/mantis_static_libstdc++) (or else you might encounter a linker-problem with libstdc++).
 
 The simplest way to build it yourself is:
 * Install the dependencies:
