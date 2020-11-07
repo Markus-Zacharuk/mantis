@@ -4,6 +4,14 @@ The original idea was to make multi-precision arithmetic accessible like built-i
 
 ![Image of a mantis](https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Miomantis_paykullii_Luc_Viatour.jpg/347px-Miomantis_paykullii_Luc_Viatour.jpg? "Egyptian Praying Mantis from I, Luc Viatour, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=5855103")
 
+# Example
+Implementation of the Lucas-Lehmer-Test:
+>\> lltest(x) = { var = 4; m = 2**x-1; for i=2; i<x; i=i+1; {var = (var**2 - 2) % m; } return var; }
+>\> lltest(19);
+>0
+>\> lltest(21);
+>840107
+
 # Tutorial
 Check out the [tutorial](https://github.com/Markus-Zacharuk/mantis/wiki/Tutorial) in the wiki.
 
